@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100&display=swap");
+
+.container {
+  background-color: hsl(224, 36%, 15%);
+  font-family: "Spartan", sans-serif;
+  text-align: center;
+}
+
+.display {
+  max-width: 320px;
+  background-color: hsl(223, 31%, 20%);
+  font-size: 25px;
+  text-align: right;
+  margin: 0% 0% 2%;
+  padding: 2%;
+  color: hsl(30, 25%, 89%);
+  border-radius: 5px;
+}
+
+.buttons {
+  max-width: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2%;
+  background-color: hsl(223, 31%, 20%);
+  border-radius: 5x;
+}
+
+button {
+  max-width: 70px;
+  flex: 1 20%;
+  margin: 2%;
+  padding: 4%;
+  color: hsl(221, 14%, 31%);
+  font-family: "Spartan", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  border-radius: 5px;
+  box-shadow: 0px 3px 0px hsl(28, 16%, 65%);
+}
+
+#delete,
+#reset {
+  color: white;
+  background-color: hsl(225, 21%, 49%);
+  font-size: 17px;
+  text-transform: uppercase;
+  box-shadow: 0px 3px 0px hsl(224, 28%, 35%);
+}
+
+#red_btn {
+  background-color: hsl(6, 63%, 50%)
+}
+
+.logo {
+  color: white;
+  text-align: left;
+  font-size: 25px;
+  padding: 2%;
+}
+
+.theme-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.custom-radio-button .checkmark {
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  background-color: hsl(6, 63%, 50%);
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
