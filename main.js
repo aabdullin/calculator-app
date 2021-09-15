@@ -3,80 +3,44 @@ class Calculator {
 
     }
 
-    getCalculations () {
+    delete() {
 
     }
 
-    appendNumber () {
-
-    }
-
-    updateDisplay () {
-        
-    }
 
     clear () {
 
     }
 
-    init () {
-        document.getElementById("btn-1").onclick = () => {
-
-        };
-        document.getElementById("btn-2").onclick = () => {
-
-        };
-        document.getElementById("btn-3").onclick = () => {
-
-        };
-        document.getElementById("btn-4").onclick = () => {
-
-        };
-        document.getElementById("btn-5").onclick = () => {
-
-        };
-        document.getElementById("btn-6").onclick = () => {
-
-        };
-        document.getElementById("btn-7").onclick = () => {
-
-        };
-        document.getElementById("btn-8").onclick = () => {
-
-        };
-        document.getElementById("btn-9").onclick = () => {
-
-        };
-        document.getElementById("btn-0").onclick = () => {
-
-        };
-        document.getElementById("btn+").onclick = () => {
-
-        };
-        document.getElementById("btn-").onclick = () => {
-
-        };
-        document.getElementById("btn-x").onclick = () => {
-
-        };
-        document.getElementById("btn/").onclick = () => {
-
-        };
-        document.getElementById("btn.").onclick = () => {
-
-        };
-        document.getElementById("reset").onclick = () => {
-
-        };
-        document.getElementById("red_btn").onclick = () => {
-
-        };
-
-
-        
-        
-
-        
+    chooseOperation(operation) {
 
     }
+
+    appendNumber (number) {
+
+    }
+
+    init () {
+        array_of_operands = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+        for (let i = 0; i < array_of_operands.length; i++) {  
+            document.getElementById(`data-${i}`).onClick=() => numberClicked(i) 
+        }
+
+        array_of_operators = ['+', '-', '.', '/', '*']
+        for (let i = 0; i < array_of_operands.length; i++) {  
+            document.getElementById(`data_${i}`).onClick=() => numberClicked(i) 
+        }
+
+
+    }
+
+    compute () {
+
+    }
+
+
+    updateDisplay () {
+
+    }
+    
 }
