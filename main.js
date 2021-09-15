@@ -1,6 +1,14 @@
 class Calculator {
     constructor() {
+        this.delete = this.delete.bind(this);
+        this.clear = this.clear.bind(this);
+        this.chooseOperation = this.chooseOperation.bind(this);
+        this.appendNumber = this.appendNumber.bind(this);
+        this.compute = this.compute.bind(this);
+        this.updateDisplay = this.updateDisplay.bind(this);
         this.init = this.init.bind(this);
+
+
     }
 
     delete() {
@@ -17,6 +25,15 @@ class Calculator {
     }
 
     appendNumber (number) {
+
+    }
+
+    compute () {
+
+    }
+
+
+    updateDisplay () {
 
     }
 
@@ -39,18 +56,10 @@ class Calculator {
             this.delete()
         };
 
-        document.getElementById("delete").onclick = () => {
-            this.delete()
+        document.getElementById("equals").onclick = () => {
+            this.compute()
+            this.updateDisplay()
         };
-
-    }
-
-    compute () {
-
-    }
-
-
-    updateDisplay () {
 
     }
     
