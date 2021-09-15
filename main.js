@@ -1,6 +1,6 @@
 class Calculator {
     constructor() {
-
+        this.init = this.init.bind(this);
     }
 
     delete() {
@@ -31,6 +31,17 @@ class Calculator {
             document.getElementById(`data_${i}`).onClick=() => numberClicked(i) 
         }
 
+        document.getElementById("reset").onclick = () => {
+            this.clear()
+        };
+
+        document.getElementById("delete").onclick = () => {
+            this.delete()
+        };
+
+        document.getElementById("delete").onclick = () => {
+            this.delete()
+        };
 
     }
 
