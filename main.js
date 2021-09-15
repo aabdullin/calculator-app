@@ -38,14 +38,17 @@ class Calculator {
     }
 
     init () {
-        array_of_operands = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
-        for (let i = 0; i < array_of_operands.length; i++) {  
-            document.getElementById(`data-${array_of_operands[i]}`).onClick=() => numberClicked(i) 
+        this.array_of_operands = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+        for (let i = 0; i < this.array_of_operands.length; i++) {  
+            document.getElementById(`data-${this.array_of_operands[i]}`).onClick=() => numberClicked(i)
+            console.log(array_of_operands[i]) 
         }
 
-        array_of_operators = ['+', '-', '.', '/', '*']
-        for (let i = 0; i < array_of_operands.length; i++) {  
-            document.getElementById(`data_${array_of_operators[i]}`).onClick=() => numberClicked(i) 
+        this.array_of_operators = ['+', '-', '.', '/', '*']
+        for (let i = 0; i < this.array_of_operands.length; i++) {  
+            document.getElementById(`data_${this.array_of_operators[i]}`).onClick=() => numberClicked(i) 
+            console.log(array_of_operators[i]) 
+
         }
 
         document.getElementById("reset").onclick = () => {
@@ -67,3 +70,4 @@ class Calculator {
 
 
 const calculator = new Calculator();
+calculator.init()
