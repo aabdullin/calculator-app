@@ -36,6 +36,10 @@ class Calculator {
 
     }
 
+    operatorClicked () {
+
+    }
+
     updateDisplay () {
         this.resultTotal.innerHTML
     }
