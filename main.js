@@ -1,5 +1,6 @@
 class Calculator {
     constructor() {
+        this.resultTotal = document.querySelector(".display");
         this.delete = this.delete.bind(this);
         this.clear = this.clear.bind(this);
         this.chooseOperation = this.chooseOperation.bind(this);
@@ -7,7 +8,6 @@ class Calculator {
         this.compute = this.compute.bind(this);
         this.updateDisplay = this.updateDisplay.bind(this);
         this.init = this.init.bind(this);
-
 
     }
 
@@ -34,18 +34,18 @@ class Calculator {
 
 
     updateDisplay () {
-
+        this.resultTotal.innerHTML
     }
 
     init () {
         array_of_operands = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
         for (let i = 0; i < array_of_operands.length; i++) {  
-            document.getElementById(`data-${i}`).onClick=() => numberClicked(i) 
+            document.getElementById(`data-${array_of_operands[i]}`).onClick=() => numberClicked(i) 
         }
 
         array_of_operators = ['+', '-', '.', '/', '*']
         for (let i = 0; i < array_of_operands.length; i++) {  
-            document.getElementById(`data_${i}`).onClick=() => numberClicked(i) 
+            document.getElementById(`data_${array_of_operators[i]}`).onClick=() => numberClicked(i) 
         }
 
         document.getElementById("reset").onclick = () => {
@@ -64,3 +64,6 @@ class Calculator {
     }
     
 }
+
+
+const calculator = new Calculator();
