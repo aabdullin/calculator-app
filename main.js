@@ -45,16 +45,20 @@ class Calculator {
     }
 
     init () {
-        this.array_of_operands = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
-        for (let i = 0; i < this.array_of_operands.length; i++) {  
-            document.getElementById(`data-${this.array_of_operands[i]}`).onClick=() => numberClicked(i) 
+        console.log('hey')
 
+        this.operands = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+        for (let i = 0; i < this.operands.length; i++) {  
+            document.getElementById(`data-${this.operands[i]}`).onClick=() => console.log(this.operands[i])
+            // this.operands[i].addEventListener('click',function(){
+            //     console.log('hello')
+            // });
+        
         }
 
-        this.array_of_operators = ['+', '-', '.', '/', '*']
-        for (let i = 0; i < this.array_of_operands.length; i++) {  
-            document.getElementById(`data_${this.array_of_operators[i]}`).onClick=() => numberClicked(i) 
-
+        this.operators = ['+', '-', '.', '/', '*']
+        for (let i = 0; i < this.operators.length; i++) {  
+            document.getElementById(`data_${this.operators[i]}`).onClick=() => console.log(operators[i]) 
         }
 
         document.getElementById("reset").onclick = () => {
